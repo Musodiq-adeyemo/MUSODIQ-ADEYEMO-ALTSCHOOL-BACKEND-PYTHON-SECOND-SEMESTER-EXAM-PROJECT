@@ -140,6 +140,7 @@ def dashboard():
 
 #This route is used to delete the user profile
 @auth.route('/dashboard/delete/<int:id>')
+@login_required
 def delete_profile(id):
     user = User.query.get_or_404(id)
 
@@ -150,6 +151,7 @@ def delete_profile(id):
 
 #This route is used to update the user profile
 @auth.route('/dashboard/update/<int:id>',methods=['GET','POST'])
+@login_required
 def update_profile(id):
     user = User.query.get_or_404(id)
 

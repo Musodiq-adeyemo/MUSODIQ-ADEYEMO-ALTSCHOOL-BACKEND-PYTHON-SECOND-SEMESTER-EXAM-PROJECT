@@ -33,6 +33,7 @@ def home():
 
  # This route is used for delecting post 
 @main.route('/posts/delete/<int:id>')
+@login_required
 def delete(id):
     post = BlogPost.query.get_or_404(id)
 
@@ -49,6 +50,7 @@ def delete(id):
 
 # This route is used for updating Posts
 @main.route('/posts/edit/<int:id>',methods=['GET','POST'])
+@login_required
 def edit(id):
     post = BlogPost.query.get_or_404(id)
 
@@ -166,6 +168,7 @@ def delete_profile(id):
 
 #This route is used to update the admin profile
 @main.route('/admin/update/<int:id>',methods=['GET','POST'])
+@login_required
 def update_profile(id):
     user = User.query.get_or_404(id)
 

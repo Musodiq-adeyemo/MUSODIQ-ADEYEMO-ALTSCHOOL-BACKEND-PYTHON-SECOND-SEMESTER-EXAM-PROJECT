@@ -88,7 +88,7 @@ This file is the engine of the project which is used for running the project. It
 ## __init__.py
 This file contains all the registration required for this project. It's used to return app, register auth, and main file.
 ## main.py
-This file contains all the BlogPost routes needed for this project posts such as creating a post, updating the post, deleting the post, and getting the post by (id, title, author).
+This file contains all the BlogPost routes needed for this project posts such as creating a post, updating the post, deleting the post, and getting the post by (id, user id, current_user_id).
 ## auth.py
 This file contains all the user authentication routes required for this project such as user registration, user login, user logout, contact page, etc.
 ## models.py
@@ -133,7 +133,7 @@ The templates folder contains all the HTML files needed for this project which i
 # STATIC FOLDER
 
 The static folder contains the uploads folder and the CSS file needed for this project which includes:
-### Upload folder
+
 ### main.css
 
 
@@ -191,12 +191,19 @@ This page contains the user's personal information that can only be accessed by 
 These are the rules which all users must abide by in the course of creating their accounts.
 ## These rules are as follows:
 The username must not be less than 7 characters.
+
 Password must not be less than 8 characters.
+
 Password must equal to confirm password 
+
 Email must be unique
+
 The username must be unique
+
 Only registered users are allowed to log in.
+
 The users must log in with their correct email and password etc.
+
 Only user of a post can edit and delete their post
 
 Only user with id 1 which is regarded as the admin is authorized to view the admin page.
@@ -233,11 +240,17 @@ This is a well-structured database that is used for storing all the user's infor
 
 # THE Challenges’
 Getting  posts by its title irrespective of how the title is written
+
 Getting post by author name
+
 Getting a specific post by its title and author name
+
 Getting forgot password token
+
 Resetting lost password
+
 Using uuid for my database
+
 Screen responsiveness (not mobile friendly)
 
 
